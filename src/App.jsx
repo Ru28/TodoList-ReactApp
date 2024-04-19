@@ -22,9 +22,13 @@ function App() {
     })
   }
 
+  const filterTodo = (cat_value) => {
+    setTodos(todos.filter((todo) => todo.status == cat_value))
+  }
   return (
     <div className="todo-container">
       <Search addTodo={addTodo}/>
+      <Filter filterTodo={filterTodo}/>
     </div>
   )
 }
