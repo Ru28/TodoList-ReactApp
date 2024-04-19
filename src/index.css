@@ -7,7 +7,7 @@
 }
 
 body{
-  background-color: #a459f4;
+  background-color:  #b1e45f;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -71,14 +71,14 @@ select{
 }
 
 input:focus, select:focus{
-  outline: 1px solid #a459f4;
+  outline: 1px solid  #b1e45f;
 }
 
 .todo-search form button{
   height: 50px;
   width: 70px;
   padding: 0px 10px 0px 10px;
-  background-color: #a459f4;
+  background-color:  #b1e45f;
   color: white;
   border: none;
   border-radius: 5px;
@@ -107,7 +107,7 @@ input:focus, select:focus{
   width: 40px;
   height: 40px;
   border-radius: 5px;
-  background-color: #a459f4;
+  background-color:  #b1e45f;
   color: white;
   cursor: pointer;
   display: flex;
@@ -170,7 +170,7 @@ input:focus, select:focus{
   height: 40px;
   padding: 10px;
   border: none;
-  background-color: #a459f4;
+  background-color:  #b1e45f;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -206,12 +206,12 @@ input:focus, select:focus{
 }
 
 .showbtn{ 
-  background: #a459f4;
+  background:  #b1e45f;
 }
 
 
 .btn-container .cancel{ 
-  background: #a459f4;
+  background: #b1e45f;
   margin-right: 10px;
 }
 
