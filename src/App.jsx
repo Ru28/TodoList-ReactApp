@@ -51,8 +51,8 @@ function App() {
     
   }
 
-  const completeTodo = (e, id,todo) => {
-
+  const completeTodo = (e, id, todo) => {
+    console.log(todos)
     if(e.target.checked){
       console.log("okay")
       setTodos(todos.map(todo => todo.id == id ? { ...todo, completed:true}: todo))

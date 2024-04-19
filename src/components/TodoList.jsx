@@ -15,7 +15,7 @@ const TodoList = ({todos, delTodo, update_todo, complete_todo, filter_todo}) => 
 
   // this line helps to get the current value of the update field as the user types in.
   let [todo, setTodo] = useState({})
-
+ 
 
   // this function helps to pass the current todo to the updateform
   const todoItem = (task, id, todo) => {
@@ -24,7 +24,6 @@ const TodoList = ({todos, delTodo, update_todo, complete_todo, filter_todo}) => 
       // taskRef.current.value = task
 
       // this line helps to get the current id of the todoitem
-
       setTodoId(id)
       setTask(task)
       setToggle(true)
@@ -40,17 +39,17 @@ const TodoList = ({todos, delTodo, update_todo, complete_todo, filter_todo}) => 
        
 
         { todos.map((todo, index) => (
-        <div className="todo-list-item" key={ index }>
-            <div className="task">
-              <input type="checkbox" onChange={(e) => complete_todo(e, todo.id, todo)}/>
-              <p id = "t_task" className = {todo.status == "Completed"? "strike":"" } >{todo.task}</p>
+            <div className="todo-list-item" key={ index }>
+                <div className="task">
+                <input type="checkbox" onChange={(e) => complete_todo(e, todo.id, todo)}/>
+                <p id = "t_task" className = {todo.completed == true? "strike":"" } >{todo.task}</p>
+                </div>
+                <div className="btn-container">
+                <div className="edit"> <TbEdit size={25} onClick={(e) => todoItem(todo.task, todo.id, todo) } /> </div>
+                <div className="del"><AiFillDelete size={25} onClick={ () =>delTodo(todo.id)}/></div>
+                </div>
             </div>
-            <div className="btn-container">
-              <div className="edit"> <TbEdit size={25} onClick={(e) => todoItem(todo.task, todo.id) } /> </div>
-              <div className="del"><AiFillDelete size={25} onClick={ () =>delTodo(todo.id)}/></div>
-            </div>
-        </div>
-        )  
+            )  
         )}         
         </div>
 
